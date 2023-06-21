@@ -24,3 +24,4 @@ Everything is deployed using IaC with Terraform.
 
 - The final result: https://galzmarc.com
 - Backend repository: https://github.com/galzmarc/cloud-resume-challenge-backend
+- Cloud Resume Challenge official website: https://cloudresumechallenge.dev/docs/the-challenge/aws/
