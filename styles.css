@@ -1,0 +1,172 @@
+:root {
+	--primary-light: #f3f6fc;
+	--primary-dark: #485cc3;
+	--dark-grey: #dadce0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+	font-family: Arial, sans-serif;
+  background-color: var(--primary-light);
+  display: flex;
+  justify-content: center;
+}
+
+body {
+  margin: 0 20%;
+}
+
+h1, h3, h4, p {
+  margin: 0;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  padding: 0 2rem;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 0;
+}
+
+.contacts {
+  display: flex;
+  flex-direction: column;
+  text-align: right;
+}
+
+section {
+  display: grid;
+  grid-template-columns: 25% 75%;
+	padding: 2rem 0;
+  border-top: 1px solid var(--dark-grey);
+}
+
+section > h3:first-of-type {
+	font-style: italic;
+}
+
+span {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+ul {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  padding-left: 1rem;
+}
+
+li {
+  padding: .2rem 0;
+  list-style-type: square;
+  line-break: auto;
+}
+
+li:first-of-type {
+	padding-top: .5rem;
+}
+
+.item {
+	padding-bottom: 1rem;
+}
+
+.item:last-of-type {
+	padding-bottom: 0;
+}
+
+.cert {
+  display: flex;
+  align-items: center;
+}
+
+.cert img {
+  padding-right: 1rem;
+}
+
+footer {
+	border-top: 1px solid var(--dark-grey);
+	text-align: center;
+	font-size: smaller;
+}
+
+footer * {
+	padding: .5rem 0;
+}
+
+footer span {
+	display: inline;
+	color: var(--primary-dark);
+}
+
+
+/* Tablets */
+@media  screen and (max-width: 960px) {
+
+  body {
+    margin: 0;
+  }
+
+}
+
+/* Mobile */
+@media screen and (max-width: 640px) {
+
+  p {
+    font-size: smaller;
+  }
+
+  main {
+    padding: 0 .5rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  header {
+    padding: 1rem 0;
+  }
+
+  .contacts * {
+    padding: .2rem;
+  }
+
+  .contacts, .contacts > a {
+    font-size: smaller;
+  }
+
+  section {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem .5rem;
+  }
+
+  section > h3:first-of-type {
+    font-style: normal;
+    font-size: larger;
+    color: var(--primary-dark);
+  }
+
+  section h3 {
+    font-size: medium;
+  }
+
+  .item {
+    padding-top: .5rem;
+  }
+
+  img {
+    height: 80%;
+    width: auto;
+  }
+
+}
