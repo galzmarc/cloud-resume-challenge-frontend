@@ -4,41 +4,23 @@ This repository contains the frontend code for my submission to the Cloud Resume
 
 ## Overview
 
-The frontend is developed using [insert frontend technology/framework], and it interacts with the backend APIs hosted on AWS. The application features a static website, a contact form, and a visitor counter.
+The frontend is developed using various AWS services, such as S3, CloudFront, Route53 and Certificate Manager. It interacts with the backend APIs hosted on AWS. The application features a static website and a visitor counter.
+
+I have chosen vanilla Javascript to connect the frontend and the backend, as IMHO it did not make sense to use any framework due to the simple operations performed.
+
+Everything is deployed using IaC with Terraform.
 
 ## Technologies Used
 
-- [Insert frontend technology/framework]: [Brief description or version]
-- [List other technologies/libraries used]
-
-## Prerequisites
-
-To run this application locally or deploy it, you need to have the following prerequisites installed:
-
-- [List prerequisites with versions, e.g., Node.js, npm]
-
-## Getting Started
-
-Follow these instructions to set up and run the frontend application:
-
-1. Clone this repository: `git clone [repository URL]`
-2. Install dependencies: `npm install`
-3. Configure environment variables: [Specify if any environment variables need to be set]
-4. Start the development server: `npm start`
-
-## Deployment
-
-To deploy the frontend application to AWS, follow these steps:
-
-1. [Provide instructions on how to deploy to AWS, including required AWS services]
-2. [Include any specific configurations or setup required]
-3. [Add instructions for environment variable setup, if applicable]
+- HTML, CSS: To create and style the website
+- JavaScript: Consitutes the integration between frontend and backend though API Gateway. Fetches the API Gateway endpoint with PUT and GET requests, called in sequence. It basically increases by one the visits counter, and then it displays the updated counter on the page. 
+- S3: Hosts the static files for the website
+- CloudFront: Used to serve the static website hosted on S3. Redirects HTTP requests to HTTPS for increased security.
+- Route53 and Certificate Manager: Used for DNS and to point requests to CloudFront.
+- Terraform: Used to deploy the frontend with IaC.
+- GitHub Actions: For CI/CD, re-deploys the frontend when any file is modified.
 
 ## Resources
 
-- [Link to the backend repository]
-- [Other relevant resources or documentation links]
-
-## License
-
-[Specify the license for your code]
+- The final result: https://galzmarc.com
+- Backend repository: https://github.com/galzmarc/cloud-resume-challenge-backend
